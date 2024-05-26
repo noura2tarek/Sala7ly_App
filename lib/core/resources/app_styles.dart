@@ -136,5 +136,6 @@ TextStyle timesBold(
     fontSize: fontSize,
     fontStyle: fontStyle,
     fontFamily: 'Times New Roman',
+
   );
 }
