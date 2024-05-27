@@ -1,43 +1,12 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sala7ly_app/core/resources/app_colors.dart';
 import 'package:sala7ly_app/core/resources/image_assets.dart';
 import 'package:sala7ly_app/core/resources/app-strings.dart';
 import '../../../core/resources/app_styles.dart';
-import '../auth/login_page.dart';
+import '../../../core/resources/routes_manager.dart';
 
-class StartPage extends StatefulWidget {
+class StartPage extends StatelessWidget {
   const StartPage({super.key});
-
-  @override
-  State<StartPage> createState() => _StartPageState();
-}
-
-class _StartPageState extends State<StartPage> {
-  late Timer _timer;
-
-  @override
-  void initState() {
-    super.initState();
-    _timer = Timer(
-      const Duration(seconds: 4),
-      _next,
-    );
-  }
-
-  _next() {
-    Navigator.pushReplacement(context, MaterialPageRoute(
-      builder: (context) {
-        return  LoginScreen();
-      },
-    ));
-  }
-
-  @override
-  void dispose() {
-    _timer.cancel();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +43,9 @@ class _StartPageState extends State<StartPage> {
                   shape: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7.0),
                       borderSide: BorderSide.none),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, AppRoutes.loginRoute);
+                  },
                   child: Text(
                     AppStrings.getStarted,
                     style: interRegular(fontSize: 17.0),

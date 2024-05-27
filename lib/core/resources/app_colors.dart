@@ -13,11 +13,4 @@ class AppColors {
   static Color? lightBlack1 =  Colors.black54;
   static Color lightBlack = Colors.black38;
 
-
-
-  //dark theme
-  // scaffoldBackgroundColor: Color(0xff333333),'
- //text form
- //borderSide: BorderSide(color: AppColors.primaryColor),
- //
 }

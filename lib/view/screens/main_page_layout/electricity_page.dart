@@ -17,19 +17,6 @@ class ElectricityScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Image(
-                        height: 30.0,
-                        width: 30.0,
-                        image: AssetImage(AppImages.returnLeading),
-                      ),
-                    ),
-                  ),
                   /*------- first container-------*/
                   Container(
                     height: 190.0,
@@ -89,6 +76,19 @@ class ElectricityScreen extends StatelessWidget {
                           color: AppColors.black,
                         ),
                       ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Image(
+                        height: 30.0,
+                        width: 30.0,
+                        image: AssetImage(AppImages.returnLeading),
+                      ),
                     ),
                   ),
                 ],

@@ -4,8 +4,8 @@ import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 
-class CarpentryIssueScreen extends StatelessWidget {
-  const CarpentryIssueScreen({super.key});
+class PlumbingIssueScreen extends StatelessWidget {
+  const PlumbingIssueScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +13,24 @@ class CarpentryIssueScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            /*------- first stack -------*/
             Stack(
               children: [
-
                 /*------- first container-------*/
                 Container(
                   height: 190.0,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(AppImages.carpentry3),
+                      opacity: 0.8,
+                      image: AssetImage(AppImages.plumping),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(25.0),
                         topLeft: Radius.circular(25.0)),
                   ),
-                  padding: const EdgeInsets.only(left: 16.0, top: 118.0),
+                  padding: const EdgeInsets.only(left: 2.0, top: 118.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -40,7 +41,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                AppStrings.carpentry,
+                                AppStrings.plumber,
                                 style: timesBold(
                                   fontStyle: FontStyle.normal,
                                   color: AppColors.black,
@@ -92,9 +93,9 @@ class CarpentryIssueScreen extends StatelessWidget {
                 ),
               ],
             ),
-            /*------- second container-------*/
+            /*------- second stack -------*/
             Stack(
-              alignment: Alignment.topRight,
+              alignment: Alignment.bottomRight,
               children: [
                 Container(
                   width: double.infinity,
@@ -115,13 +116,15 @@ class CarpentryIssueScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AppStrings.specialCarpentryRequest,
+                        AppStrings.specialPlumbingRequest,
                         style: interBold(
                             fontStyle: FontStyle.normal,
                             fontSize: 18.0,
                             color: AppColors.black),
                       ),
-                      const SizedBox(height: 10.0,),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 26.0),
                         child: GestureDetector(
@@ -188,10 +191,10 @@ class CarpentryIssueScreen extends StatelessWidget {
                                   Text(
                                     AppStrings.findNearby,
                                     style: interMedium(
-                                        fontSize: 11.0,
-                                        fontStyle: FontStyle.normal,
-                                        color:
-                                            AppColors.white.withOpacity(0.5)),
+                                      fontSize: 11.0,
+                                      fontStyle: FontStyle.normal,
+                                      color: AppColors.white.withOpacity(0.5),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -203,10 +206,10 @@ class CarpentryIssueScreen extends StatelessWidget {
                   ),
                 ),
                 /*----- person image -----*/
-                Padding(
-                  padding: const EdgeInsets.only(top: 200.0),
+                RotatedBox(
+                  quarterTurns: 4,
                   child: Image.asset(
-                    AppImages.carpentry2,
+                    AppImages.plumping2,
                     color: AppColors.black,
                   ),
                 ),

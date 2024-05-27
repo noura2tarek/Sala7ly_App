@@ -3,23 +3,26 @@ import '../../../../core/resources/app_colors.dart';
 import '../../../../core/resources/app_styles.dart';
 
 class CustomLoginField extends StatelessWidget {
-  CustomLoginField(
-      {super.key,
-      required this.controller,
-      this.validatorText,
-      this.obsecure = false, required this.keyboardType});
+  const CustomLoginField({
+    super.key,
+    required this.controller,
+    this.validatorText = '',
+    this.obsecure = false,
+    required this.keyboardType,
+  });
 
   final TextEditingController controller;
-  String? validatorText = '';
+  final String? validatorText;
   final bool obsecure;
   final TextInputType keyboardType;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.primaryColor,
       height: 53.0,
       child: TextFormField(
-        keyboardType: keyboardType ,
+        keyboardType: keyboardType,
         controller: controller,
         obscureText: obsecure,
         cursorHeight: 35.0,

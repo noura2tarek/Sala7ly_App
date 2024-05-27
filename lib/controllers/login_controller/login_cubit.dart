@@ -18,9 +18,10 @@ class LoginCubit extends Cubit<LoginState> {
   final formKey = GlobalKey<FormState>();
 
   // login function
-  login() {
+  login(BuildContext context) {
     if (formKey.currentState!.validate()) {
       //login function
+      Navigator.pushNamed(context, AppRoutes.mainPageRoute);
     }
   }
 

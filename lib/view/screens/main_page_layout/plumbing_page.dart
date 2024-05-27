@@ -5,8 +5,8 @@ import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 import '../../../core/resources/routes_manager.dart';
 
-class PlumpingScreen extends StatelessWidget {
-  PlumpingScreen({super.key});
+class PlumbingScreen extends StatelessWidget {
+  PlumbingScreen({super.key});
 
   final List<String> strings = [
     AppStrings.repairOfPlumping,
@@ -26,19 +26,6 @@ class PlumpingScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Image(
-                        height: 30.0,
-                        width: 30.0,
-                        image: AssetImage(AppImages.returnLeading),
-                      ),
-                    ),
-                  ),
                   /*------- first container-------*/
                   Container(
                     height: 190.0,
@@ -101,11 +88,24 @@ class PlumpingScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Image(
+                        height: 30.0,
+                        width: 30.0,
+                        image: AssetImage(AppImages.returnLeading),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               /*------- second container-------*/
               Stack(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.bottomRight,
                 children: [
                   Container(
                     width: double.infinity,
@@ -169,7 +169,7 @@ class PlumpingScreen extends StatelessWidget {
                                   onPressed: () {
                                     // go to E issue page
                                     Navigator.pushNamed(context,
-                                        AppRoutes.electricityIssueRoute);
+                                        AppRoutes.plumbingIssueRoute);
                                   },
                                   child: Row(
                                     children: [
@@ -229,7 +229,7 @@ class PlumpingScreen extends StatelessWidget {
                   ),
                   /* ---  image ----*/
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 70.0),
+                    padding: const EdgeInsets.only(bottom: 60.0),
                     child: Image.asset(
                       AppImages.plumping2,
                       color: AppColors.black,

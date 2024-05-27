@@ -26,19 +26,6 @@ class MechanicsScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Image(
-                        height: 30.0,
-                        width: 30.0,
-                        image: AssetImage(AppImages.returnLeading),
-                      ),
-                    ),
-                  ),
                   /*------- first container-------*/
                   Container(
                     height: 190.0,
@@ -73,7 +60,7 @@ class MechanicsScreen extends StatelessWidget {
                                 ),
                                 Container(
                                   height: 6.0,
-                                  width: 93.0,
+                                  width: 95.0,
                                   decoration: const BoxDecoration(
                                     color: AppColors.brown,
                                     borderRadius: BorderRadius.only(
@@ -99,6 +86,19 @@ class MechanicsScreen extends StatelessWidget {
                           color: AppColors.black,
                         ),
                       ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Image(
+                        height: 30.0,
+                        width: 30.0,
+                        image: AssetImage(AppImages.returnLeading),
+                      ),
                     ),
                   ),
                 ],
@@ -168,9 +168,9 @@ class MechanicsScreen extends StatelessWidget {
                                     ),
                                   ),
                                   onPressed: () {
-                                    // go to E issue page
+                                    // go to issue page
                                     Navigator.pushNamed(context,
-                                        AppRoutes.electricityIssueRoute);
+                                        AppRoutes.mechanicsIssueRoute);
                                   },
                                   child: Row(
                                     children: [

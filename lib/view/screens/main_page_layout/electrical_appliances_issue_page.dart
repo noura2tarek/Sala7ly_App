@@ -4,8 +4,8 @@ import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 
-class CarpentryIssueScreen extends StatelessWidget {
-  const CarpentryIssueScreen({super.key});
+class ElectricalAppliancesIssueScreen extends StatelessWidget {
+  const ElectricalAppliancesIssueScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,21 +15,21 @@ class CarpentryIssueScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-
                 /*------- first container-------*/
                 Container(
                   height: 190.0,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(AppImages.carpentry3),
+                      opacity: 0.8,
+                      image: AssetImage(AppImages.applicant),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(25.0),
                         topLeft: Radius.circular(25.0)),
                   ),
-                  padding: const EdgeInsets.only(left: 16.0, top: 118.0),
+                  padding: const EdgeInsets.only(left: 2.0, top: 118.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -40,7 +40,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                AppStrings.carpentry,
+                                AppStrings.eLectricalAppliances,
                                 style: timesBold(
                                   fontStyle: FontStyle.normal,
                                   color: AppColors.black,
@@ -49,7 +49,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                               ),
                               Container(
                                 height: 6.0,
-                                width: 93.0,
+                                width: 200.0,
                                 decoration: const BoxDecoration(
                                   color: AppColors.brown,
                                   borderRadius: BorderRadius.only(
@@ -70,8 +70,8 @@ class CarpentryIssueScreen extends StatelessWidget {
                         ],
                       ),
                       Divider(
-                        endIndent: 24.0,
-                        indent: 19.0,
+                        endIndent: 10.0,
+                        indent: 5.0,
                         color: AppColors.black,
                       ),
                     ],
@@ -94,7 +94,7 @@ class CarpentryIssueScreen extends StatelessWidget {
             ),
             /*------- second container-------*/
             Stack(
-              alignment: Alignment.topRight,
+              alignment: Alignment.centerRight,
               children: [
                 Container(
                   width: double.infinity,
@@ -115,13 +115,15 @@ class CarpentryIssueScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AppStrings.specialCarpentryRequest,
+                        AppStrings.specialElectricalAppRequest,
                         style: interBold(
                             fontStyle: FontStyle.normal,
                             fontSize: 18.0,
                             color: AppColors.black),
                       ),
-                      const SizedBox(height: 10.0,),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 26.0),
                         child: GestureDetector(
@@ -204,9 +206,9 @@ class CarpentryIssueScreen extends StatelessWidget {
                 ),
                 /*----- person image -----*/
                 Padding(
-                  padding: const EdgeInsets.only(top: 200.0),
+                  padding: const EdgeInsets.only(bottom: 10.0),
                   child: Image.asset(
-                    AppImages.carpentry2,
+                    AppImages.repair,
                     color: AppColors.black,
                   ),
                 ),

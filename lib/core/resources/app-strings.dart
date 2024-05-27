@@ -52,6 +52,7 @@ class AppStrings {
   static const String specialCarpentryRequest = 'Special Carpentry Request';
   static const String installation = 'installation';
   static const String plumber =  'Plumber';
+  static const String plumbing =  'Plumbing';
   static const String mechanics =  'Mechanics';
   static const String vehicleIssues =  'Vehicle Issues';
   static const String repairAndReplacement =  'Repair and Replacement of Components';
@@ -65,6 +66,10 @@ class AppStrings {
   static const String installationOfGas =  'Installation of Gas Lines';
   static const String installationOfPlumping = 'Installation of Plumbing Systems';
   static const String remodelingAndRenovation =  'Remodeling and Renovation Projects';
+  static const String specialPaintingRequest =  'Special Painting Request';
+  static const String specialElectricalAppRequest =  'Special Electrical Appliance Request';
+  static const String specialPlumbingRequest =  'Special Plumbing Request';
+  static const String specialMechanicalRequest =  'Special Mechanical Request';
   static const String welcomeBack =  'Welcome back again in salah-ly\nThank you for logging in for a faster ordering experience.';
   static const String information =  'To reset your password, please enter your email address. You may need to check your spam folder or unblock no-reply@salahha.us';
 

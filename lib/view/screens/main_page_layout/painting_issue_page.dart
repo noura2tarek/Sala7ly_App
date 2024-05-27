@@ -4,8 +4,8 @@ import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 
-class CarpentryIssueScreen extends StatelessWidget {
-  const CarpentryIssueScreen({super.key});
+class PaintingIssueScreen extends StatelessWidget {
+  const PaintingIssueScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +15,14 @@ class CarpentryIssueScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-
                 /*------- first container-------*/
                 Container(
                   height: 190.0,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(AppImages.carpentry3),
+                      opacity: 0.8,
+                      image: AssetImage(AppImages.painting),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.only(
@@ -40,7 +40,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                AppStrings.carpentry,
+                                AppStrings.painting,
                                 style: timesBold(
                                   fontStyle: FontStyle.normal,
                                   color: AppColors.black,
@@ -94,7 +94,7 @@ class CarpentryIssueScreen extends StatelessWidget {
             ),
             /*------- second container-------*/
             Stack(
-              alignment: Alignment.topRight,
+              alignment: Alignment.bottomRight,
               children: [
                 Container(
                   width: double.infinity,
@@ -115,13 +115,15 @@ class CarpentryIssueScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AppStrings.specialCarpentryRequest,
+                        AppStrings.specialPaintingRequest,
                         style: interBold(
                             fontStyle: FontStyle.normal,
                             fontSize: 18.0,
                             color: AppColors.black),
                       ),
-                      const SizedBox(height: 10.0,),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 26.0),
                         child: GestureDetector(
@@ -204,9 +206,9 @@ class CarpentryIssueScreen extends StatelessWidget {
                 ),
                 /*----- person image -----*/
                 Padding(
-                  padding: const EdgeInsets.only(top: 200.0),
+                  padding: const EdgeInsets.only(bottom: 10.0),
                   child: Image.asset(
-                    AppImages.carpentry2,
+                    AppImages.painting2,
                     color: AppColors.black,
                   ),
                 ),

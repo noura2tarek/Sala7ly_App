@@ -15,17 +15,6 @@ class ElectricityIssueScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 73.0, left: 19.0),
-                  child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Image(
-                          height: 30.0,
-                          width: 30.0,
-                          image: AssetImage(AppImages.returnLeading))),
-                ),
                 /*------- first container-------*/
                 Container(
                   height: 190.0,
@@ -87,6 +76,17 @@ class ElectricityIssueScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 73.0, left: 19.0),
+                  child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Image(
+                          height: 30.0,
+                          width: 30.0,
+                          image: AssetImage(AppImages.returnLeading))),
+                ),
               ],
             ),
             /*------- second container-------*/
@@ -118,21 +118,26 @@ class ElectricityIssueScreen extends StatelessWidget {
                             fontSize: 18.0,
                             color: AppColors.black),
                       ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 26.0),
                         child: GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             //add extra specific issue
                           },
                           child: Row(
                             children: [
                               Image.asset(AppImages.editIcon),
-                              const SizedBox(width: 10.0,),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
                               Text(
                                 AppStrings.addExtraSpecific,
                                 style: interBold(
                                   fontStyle: FontStyle.normal,
-                                  fontSize: 16.0,
+                                  fontSize: 15.0,
                                   color: AppColors.black,
                                 ),
                               ),
@@ -144,12 +149,12 @@ class ElectricityIssueScreen extends StatelessWidget {
                         height: 10.0,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 35.0),
+                        padding: const EdgeInsets.only(left: 50.0),
                         child: Text(
                           AppStrings.anyOtherRepairs,
                           style: interRegular(
                             fontStyle: FontStyle.normal,
-                            fontSize: 16.0,
+                            fontSize: 15.0,
                             color: AppColors.black,
                           ),
                         ),
@@ -160,7 +165,7 @@ class ElectricityIssueScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.center,
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: 25.0),
+                          padding: const EdgeInsets.only(bottom: 40.0),
                           child: Container(
                             height: 47.0,
                             decoration: const BoxDecoration(
@@ -184,7 +189,8 @@ class ElectricityIssueScreen extends StatelessWidget {
                                     style: interMedium(
                                         fontSize: 11.0,
                                         fontStyle: FontStyle.normal,
-                                        color: AppColors.white.withOpacity(0.5)),
+                                        color:
+                                            AppColors.white.withOpacity(0.5)),
                                   ),
                                 ],
                               ),

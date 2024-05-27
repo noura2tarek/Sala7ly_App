@@ -3,6 +3,7 @@ import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
+import '../../../core/resources/routes_manager.dart';
 
 class ElectricalAppliancesScreen extends StatelessWidget {
   const ElectricalAppliancesScreen({super.key});
@@ -16,22 +17,6 @@ class ElectricalAppliancesScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Image(
-                        height: 30.0,
-                        width: 30.0,
-                        image: const AssetImage(
-                          AppImages.returnLeading,
-                        ),
-                        color: AppColors.black,
-                      ),
-                    ),
-                  ),
                   /*------- first container-------*/
                   Container(
                     height: 190.0,
@@ -91,6 +76,22 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                           color: AppColors.black,
                         ),
                       ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 73.0, left: 19.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Image(
+                        height: 30.0,
+                        width: 30.0,
+                        image: const AssetImage(
+                          AppImages.returnLeading,
+                        ),
+                        color: AppColors.black,
+                      ),
                     ),
                   ),
                 ],
@@ -161,6 +162,7 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                                   ),
                                   onPressed: () {
                                     // go to E issue page
+                                    Navigator.pushNamed(context, AppRoutes.electricalApplianceIssueRoute);
                                   },
                                   child: Row(
                                     children: [

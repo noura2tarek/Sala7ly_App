@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sala7ly_app/core/resources/app-strings.dart';
 import 'package:sala7ly_app/core/resources/app_styles.dart';
 import 'package:sala7ly_app/core/resources/image_assets.dart';
+import 'package:sala7ly_app/core/resources/routes_manager.dart';
 import 'package:sala7ly_app/view/screens/main_page_layout/widgets/grid_view_item.dart';
 import '../../../core/resources/app_colors.dart';
 
@@ -11,11 +12,11 @@ class MainPage extends StatelessWidget {
 
   final List<String> strings = [
     AppStrings.electricity,
-    'Electrical Appliances',
-    'Carpentry',
-    'Painting',
-    'Plumbing',
-    'Mechanicals',
+    AppStrings.eLectricalAppliances,
+    AppStrings.carpentry,
+    AppStrings.painting,
+    AppStrings.plumbing,
+    AppStrings.mechanics,
   ];
 
   final List<String> images = [
@@ -26,10 +27,18 @@ class MainPage extends StatelessWidget {
     AppImages.plumping,
     AppImages.mechanics,
   ];
-  // methods list
 
   @override
   Widget build(BuildContext context) {
+    // methods list
+    final List<void Function()?> navFunctions = [
+      () => Navigator.pushNamed(context, AppRoutes.electricityRoute),
+      () => Navigator.pushNamed(context, AppRoutes.electricalAppliancesRoute),
+      () => Navigator.pushNamed(context, AppRoutes.carpentryRoute),
+      () => Navigator.pushNamed(context, AppRoutes.paintingRoute),
+      () => Navigator.pushNamed(context, AppRoutes.plumbingRoute),
+      () => Navigator.pushNamed(context, AppRoutes.mechanicsRoute),
+    ];
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: SafeArea(
@@ -169,12 +178,12 @@ class MainPage extends StatelessWidget {
                       crossAxisSpacing: 8.0,
                       childAspectRatio: 1.3,
                       children: List.generate(
-                          images.length,
-                          (index) => GridViewItem(
-                              imageLink: images[index],
-                              text: strings[index],
-                              onTab: () {},
-                          ),
+                        images.length,
+                        (index) => GridViewItem(
+                          imageLink: images[index],
+                          text: strings[index],
+                          onTab: navFunctions[index],
+                        ),
                       ),
                     ),
                   ],

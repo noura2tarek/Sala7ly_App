@@ -4,8 +4,8 @@ import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 
-class CarpentryIssueScreen extends StatelessWidget {
-  const CarpentryIssueScreen({super.key});
+class MechanicsIssueScreen extends StatelessWidget {
+  const MechanicsIssueScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +13,24 @@ class CarpentryIssueScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            /*------- first stack -------*/
             Stack(
               children: [
-
                 /*------- first container-------*/
                 Container(
                   height: 190.0,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(AppImages.carpentry3),
+                      opacity: 0.7,
+                      image: AssetImage(AppImages.mechanics),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(25.0),
                         topLeft: Radius.circular(25.0)),
                   ),
-                  padding: const EdgeInsets.only(left: 16.0, top: 118.0),
+                  padding: const EdgeInsets.only(left: 2.0, top: 118.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -40,7 +41,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                AppStrings.carpentry,
+                                AppStrings.mechanics,
                                 style: timesBold(
                                   fontStyle: FontStyle.normal,
                                   color: AppColors.black,
@@ -49,7 +50,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                               ),
                               Container(
                                 height: 6.0,
-                                width: 93.0,
+                                width: 95.0,
                                 decoration: const BoxDecoration(
                                   color: AppColors.brown,
                                   borderRadius: BorderRadius.only(
@@ -92,9 +93,9 @@ class CarpentryIssueScreen extends StatelessWidget {
                 ),
               ],
             ),
-            /*------- second container-------*/
+            /*------- second stack -------*/
             Stack(
-              alignment: Alignment.topRight,
+              alignment: Alignment.bottomLeft,
               children: [
                 Container(
                   width: double.infinity,
@@ -115,13 +116,15 @@ class CarpentryIssueScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AppStrings.specialCarpentryRequest,
+                        AppStrings.specialMechanicalRequest,
                         style: interBold(
                             fontStyle: FontStyle.normal,
                             fontSize: 18.0,
                             color: AppColors.black),
                       ),
-                      const SizedBox(height: 10.0,),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 26.0),
                         child: GestureDetector(
@@ -170,9 +173,10 @@ class CarpentryIssueScreen extends StatelessWidget {
                           child: Container(
                             height: 47.0,
                             decoration: const BoxDecoration(
-                                color: AppColors.darkBrown,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0))),
+                              color: AppColors.darkBrown,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(6.0)),
+                            ),
                             child: MaterialButton(
                               onPressed: () {
                                 //find nearby craft man method
@@ -188,10 +192,10 @@ class CarpentryIssueScreen extends StatelessWidget {
                                   Text(
                                     AppStrings.findNearby,
                                     style: interMedium(
-                                        fontSize: 11.0,
-                                        fontStyle: FontStyle.normal,
-                                        color:
-                                            AppColors.white.withOpacity(0.5)),
+                                      fontSize: 11.0,
+                                      fontStyle: FontStyle.normal,
+                                      color: AppColors.white.withOpacity(0.5),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -203,10 +207,10 @@ class CarpentryIssueScreen extends StatelessWidget {
                   ),
                 ),
                 /*----- person image -----*/
-                Padding(
-                  padding: const EdgeInsets.only(top: 200.0),
+                RotatedBox(
+                  quarterTurns: 4,
                   child: Image.asset(
-                    AppImages.carpentry2,
+                    AppImages.mechanics2,
                     color: AppColors.black,
                   ),
                 ),

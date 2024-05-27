@@ -93,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                                     child: CustomButton(
                                       buttonText: AppStrings.login,
                                       onPressed: () {
-                                        cubit.login();
+                                        cubit.login(context);
                                       },
                                     ),
                                   ),
