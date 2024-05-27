@@ -9,7 +9,9 @@ import '../../view/screens/main_page_layout/electrical_appliances_page.dart';
 import '../../view/screens/main_page_layout/electricity_issue_page.dart';
 import '../../view/screens/main_page_layout/electricity_page.dart';
 import '../../view/screens/main_page_layout/main_page.dart';
+import '../../view/screens/main_page_layout/mechanics_page.dart';
 import '../../view/screens/main_page_layout/painting_page.dart';
+import '../../view/screens/main_page_layout/plumbing_page.dart';
 
 //routes names class
 class AppRoutes {
@@ -24,6 +26,8 @@ class AppRoutes {
   static const String carpentryRoute = "/carpentry";
   static const String paintingRoute = "/painting";
   static const String electricalAppliancesRoute = "/electricalAppliances";
+  static const String plumbingRoute = "/plumping";
+  static const String mechanicsRoute = "/mechanics";
   static const String electricityIssueRoute = "/electricityIssue";
   static const String carpentryIssueRoute = "/carpentryIssue";
   static const String lastPageRoute = "/lastPage";
@@ -42,6 +46,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutes.carpentryRoute: (context) =>  CarpentryScreen(),
   AppRoutes.paintingRoute: (context) =>  PaintingScreen(),
   AppRoutes.electricalAppliancesRoute: (context) =>  ElectricalAppliancesScreen(),
+  AppRoutes.plumbingRoute: (context) =>  PlumpingScreen(),
+  AppRoutes.mechanicsRoute: (context) =>  MechanicsScreen(),
   AppRoutes.electricityIssueRoute: (context) =>  ElectricityIssueScreen(),
   AppRoutes.carpentryIssueRoute: (context) =>  CarpentryIssueScreen(),
   AppRoutes.lastPageRoute: (context) =>  LastPage(),

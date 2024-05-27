@@ -5,8 +5,17 @@ import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 import '../../../core/resources/routes_manager.dart';
 
-class ElectricityScreen extends StatelessWidget {
-  const ElectricityScreen({super.key});
+class MechanicsScreen extends StatelessWidget {
+  MechanicsScreen({super.key});
+
+  final List<String> strings = [
+    AppStrings.vehicleIssues,
+    AppStrings.repairAndReplacement,
+    AppStrings.diagnosticTesting,
+    AppStrings.vehicleInspections,
+    AppStrings.carMalfunction,
+    AppStrings.carBatteryIssues,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +45,8 @@ class ElectricityScreen extends StatelessWidget {
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(AppImages.electricityImage),
+                        image: AssetImage(AppImages.mechanics),
+                        opacity: 0.8,
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.only(
@@ -54,7 +64,7 @@ class ElectricityScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  AppStrings.electricity,
+                                  AppStrings.mechanics,
                                   style: timesBold(
                                     fontStyle: FontStyle.normal,
                                     color: AppColors.black,
@@ -95,7 +105,7 @@ class ElectricityScreen extends StatelessWidget {
               ),
               /*------- second container-------*/
               Stack(
-                alignment: Alignment.bottomRight,
+                alignment: Alignment.bottomCenter,
                 children: [
                   Container(
                     width: double.infinity,
@@ -118,10 +128,11 @@ class ElectricityScreen extends StatelessWidget {
                           (index) => Padding(
                             padding: const EdgeInsets.only(bottom: 20.0),
                             child: Container(
+                              alignment: Alignment.center,
                               padding: const EdgeInsetsDirectional.symmetric(
-                                  horizontal: 10.0, vertical: 10.0),
-                              width: 150.0,
-                              height: 61.0,
+                                  horizontal: 10.0),
+                              width: 180.0,
+                              height: 65.0,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage(AppImages.rectangleBrown),
@@ -131,7 +142,7 @@ class ElectricityScreen extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(15.0)),
                               ),
                               child: Text(
-                                AppStrings.electricCircuits,
+                                strings[index],
                                 textAlign: TextAlign.center,
                                 style: ubuntuBold(),
                               ),
@@ -139,7 +150,7 @@ class ElectricityScreen extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 25.0),
+                          padding: const EdgeInsets.only(bottom: 85.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
@@ -217,11 +228,11 @@ class ElectricityScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // image
+                  /* ---  image ----*/
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 80.0),
+                    padding: const EdgeInsets.only(bottom: 10.0),
                     child: Image.asset(
-                      AppImages.person,
+                      AppImages.mechanics2,
                       color: AppColors.black,
                     ),
                   ),

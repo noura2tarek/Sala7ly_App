@@ -24,7 +24,7 @@ class MainPage extends StatelessWidget {
     AppImages.carpentry,
     AppImages.painting,
     AppImages.plumping,
-    AppImages.mechanicals,
+    AppImages.mechanics,
   ];
   // methods list
 

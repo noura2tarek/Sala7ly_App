@@ -76,14 +76,19 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: Inter
-       fonts:
-         - asset: assets/fonts/Inter.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf
 
-     - family: Times New Roman
-       fonts:
-         - asset: assets/fonts/Times New Roman/times new roman.ttf
-         - asset: assets/fonts/Times New Roman/times new roman bold.ttf
+    - family: Times New Roman
+      fonts:
+        - asset: assets/fonts/Times New Roman/times new roman.ttf
+        - asset: assets/fonts/Times New Roman/times new roman bold.ttf
+
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu/Ubuntu-B.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-R.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

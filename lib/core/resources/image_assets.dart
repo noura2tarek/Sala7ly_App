@@ -25,11 +25,13 @@ class AppImages {
   static const String carpentry ='$rootImages/carpentry.png';
   static const String painting ='$rootImages/photo.png';
   static const String plumping ='$rootImages/plumping.png';
-  static const String mechanicals ='$rootImages/mechanicals.png';
+  static const String mechanics ='$rootImages/mechanics.png';
   static const String editIcon ='$rootImages/edit.png';
   static const String carpentry2 ='$rootImages/carpentry2.png';
   static const String carpentry3 ='$rootImages/capentry3.png';
   static const String painting2 ='$rootImages/painting2.png';
+  static const String plumping2 ='$rootImages/plumbing2.png';
+  static const String mechanics2 ='$rootImages/mechanics2.png';
 
 
 

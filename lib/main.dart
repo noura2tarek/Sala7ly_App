@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sala7ly_app/core/resources/routes_manager.dart';
-import 'package:sala7ly_app/view/screens/start_page/start_page.dart';
+import 'package:sala7ly_app/view/screens/main_page_layout/mechanics_page.dart';
 import 'core/resources/app-strings.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
         useMaterial3: true,
       ),
-      home: StartPage(),
+      home: MechanicsScreen(),
       routes: routes,
     );
   }

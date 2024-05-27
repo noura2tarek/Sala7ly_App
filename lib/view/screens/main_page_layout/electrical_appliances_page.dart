@@ -117,7 +117,7 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                       children: [
                         ...List.generate(
                           6,
-                              (index) => Padding(
+                          (index) => Padding(
                             padding: const EdgeInsets.only(bottom: 20.0),
                             child: Container(
                               padding: const EdgeInsetsDirectional.symmetric(
@@ -130,14 +130,12 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(15.0)),
+                                    BorderRadius.all(Radius.circular(15.0)),
                               ),
                               child: Text(
-                                'installation',
+                                AppStrings.installation,
                                 textAlign: TextAlign.center,
-                                style: interBold(
-                                    fontSize: 15.0,
-                                    fontStyle: FontStyle.normal),
+                                style: ubuntuBold(),
                               ),
                             ),
                           ),
@@ -163,7 +161,6 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                                   ),
                                   onPressed: () {
                                     // go to E issue page
-
                                   },
                                   child: Row(
                                     children: [
@@ -190,7 +187,7 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                     color: AppColors.darkBrown,
                                     borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0))),
+                                        BorderRadius.all(Radius.circular(6.0))),
                                 child: MaterialButton(
                                   onPressed: () {
                                     //find nearby craft man method
@@ -200,8 +197,9 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                                       Text(
                                         AppStrings.continueS,
                                         style: interMedium(
-                                            fontStyle: FontStyle.normal,
-                                            fontSize: 19.0),
+                                          fontStyle: FontStyle.normal,
+                                          fontSize: 19.0,
+                                        ),
                                       ),
                                       Text(
                                         AppStrings.findNearby,

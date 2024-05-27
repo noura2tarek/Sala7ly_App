@@ -5,8 +5,17 @@ import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 import '../../../core/resources/routes_manager.dart';
 
-class ElectricityScreen extends StatelessWidget {
-  const ElectricityScreen({super.key});
+class PlumpingScreen extends StatelessWidget {
+  PlumpingScreen({super.key});
+
+  final List<String> strings = [
+    AppStrings.repairOfPlumping,
+    AppStrings.installWaterTreatment,
+    AppStrings.emergencyPlumbing,
+    AppStrings.installationOfGas,
+    AppStrings.installationOfPlumping,
+    AppStrings.remodelingAndRenovation,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +45,8 @@ class ElectricityScreen extends StatelessWidget {
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(AppImages.electricityImage),
+                        image: AssetImage(AppImages.plumping),
+                        opacity: 0.8,
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.only(
@@ -54,7 +64,7 @@ class ElectricityScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  AppStrings.electricity,
+                                  AppStrings.plumber,
                                   style: timesBold(
                                     fontStyle: FontStyle.normal,
                                     color: AppColors.black,
@@ -95,7 +105,7 @@ class ElectricityScreen extends StatelessWidget {
               ),
               /*------- second container-------*/
               Stack(
-                alignment: Alignment.bottomRight,
+                alignment: Alignment.bottomCenter,
                 children: [
                   Container(
                     width: double.infinity,
@@ -120,7 +130,7 @@ class ElectricityScreen extends StatelessWidget {
                             child: Container(
                               padding: const EdgeInsetsDirectional.symmetric(
                                   horizontal: 10.0, vertical: 10.0),
-                              width: 150.0,
+                              width: 177.0,
                               height: 61.0,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
@@ -131,7 +141,7 @@ class ElectricityScreen extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(15.0)),
                               ),
                               child: Text(
-                                AppStrings.electricCircuits,
+                                strings[index],
                                 textAlign: TextAlign.center,
                                 style: ubuntuBold(),
                               ),
@@ -217,11 +227,11 @@ class ElectricityScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // image
+                  /* ---  image ----*/
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 80.0),
+                    padding: const EdgeInsets.only(bottom: 70.0),
                     child: Image.asset(
-                      AppImages.person,
+                      AppImages.plumping2,
                       color: AppColors.black,
                     ),
                   ),

@@ -9,69 +9,6 @@ TextStyle robotoRegular12 = const TextStyle(
   fontFamily: 'Roboto',
 );
 
-//Roboto regular 16
-TextStyle robotoRegular16 = const TextStyle(
-  fontWeight: FontWeight.normal,
-  color: AppColors.primaryColor,
-  fontSize: 16.0,
-  fontFamily: 'Roboto',
-);
-
-//Roboto medium 16
-TextStyle robotoMedium16 = const TextStyle(
-  fontWeight: FontWeight.w500,
-  color: AppColors.secondColor,
-  fontSize: 16.0,
-  fontFamily: 'Roboto',
-);
-//Roboto regular 17
-TextStyle robotoRegular17 = const TextStyle(
-  fontWeight: FontWeight.normal,
-  color: AppColors.primaryColor,
-  fontSize: 17.0,
-  fontFamily: 'Roboto',
-);
-
-//Roboto regular 20
-TextStyle robotoRegular20 = const TextStyle(
-  fontWeight: FontWeight.normal,
-  color: AppColors.secondColor,
-  fontSize: 20.0,
-  fontFamily: 'Roboto',
-);
-
-//Roboto medium 18
-TextStyle robotoMedium18 = TextStyle(
-  fontWeight: FontWeight.w500,
-  color: AppColors.secondColor,
-  fontSize: 18.0,
-  fontFamily: 'Roboto',
-);
-
-//Roboto semi bold 20
-TextStyle robotoSemiBold20 = TextStyle(
-  fontWeight: FontWeight.w600,
-  color: AppColors.secondColor,
-  fontSize: 20.0,
-  fontFamily: 'Roboto',
-);
-
-//Roboto semi bold 25
-TextStyle robotoSemiBold25 = const TextStyle(
-  fontWeight: FontWeight.w600,
-  color: AppColors.primaryColor,
-  fontSize: 24.0,
-  fontFamily: 'Roboto',
-);
-
-//Roboto medium 32
-TextStyle robotoMedium32NoShadow = const TextStyle(
-  fontWeight: FontWeight.w500,
-  color: AppColors.secondColor,
-  fontSize: 32.0,
-  fontFamily: 'Roboto',
-);
-
 ///////Inter////////
 
 //inter regular
@@ -136,6 +73,21 @@ TextStyle timesBold(
     fontSize: fontSize,
     fontStyle: fontStyle,
     fontFamily: 'Times New Roman',
+
+  );
+}
+
+//Ubuntu bold
+TextStyle ubuntuBold(
+    {var color = const Color(0xffffffff),
+      double fontSize = 15.0,
+      FontStyle fontStyle = FontStyle.normal}) {
+  return TextStyle(
+    fontWeight: FontWeight.bold,
+    color: color,
+    fontSize: fontSize,
+    fontStyle: fontStyle,
+    fontFamily: 'Ubuntu',
 
   );
 }

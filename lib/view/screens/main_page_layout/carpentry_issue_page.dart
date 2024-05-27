@@ -18,13 +18,15 @@ class CarpentryIssueScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 73.0, left: 19.0),
                   child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Image(
-                          height: 30.0,
-                          width: 30.0,
-                          image: AssetImage(AppImages.returnLeading))),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Image(
+                      height: 30.0,
+                      width: 30.0,
+                      image: AssetImage(AppImages.returnLeading),
+                    ),
+                  ),
                 ),
                 /*------- first container-------*/
                 Container(
@@ -97,7 +99,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 534.0,
                   padding:
-                  const EdgeInsets.only(top: 65.0, left: 11.0, right: 10.0),
+                      const EdgeInsets.only(top: 65.0, left: 11.0, right: 10.0),
                   decoration: BoxDecoration(
                     color: AppColors.white,
                     image: const DecorationImage(
@@ -121,13 +123,15 @@ class CarpentryIssueScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 26.0),
                         child: GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             //add extra specific issue
                           },
                           child: Row(
                             children: [
                               Image.asset(AppImages.editIcon),
-                              const SizedBox(width: 10.0,),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
                               Text(
                                 AppStrings.addExtraSpecific,
                                 style: interBold(
@@ -166,7 +170,7 @@ class CarpentryIssueScreen extends StatelessWidget {
                             decoration: const BoxDecoration(
                                 color: AppColors.darkBrown,
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(6.0))),
+                                    BorderRadius.all(Radius.circular(6.0))),
                             child: MaterialButton(
                               onPressed: () {
                                 //find nearby craft man method
@@ -184,7 +188,8 @@ class CarpentryIssueScreen extends StatelessWidget {
                                     style: interMedium(
                                         fontSize: 11.0,
                                         fontStyle: FontStyle.normal,
-                                        color: AppColors.white.withOpacity(0.5)),
+                                        color:
+                                            AppColors.white.withOpacity(0.5)),
                                   ),
                                 ],
                               ),

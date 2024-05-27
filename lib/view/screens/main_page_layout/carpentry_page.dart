@@ -135,9 +135,7 @@ class CarpentryScreen extends StatelessWidget {
                               child: Text(
                                 AppStrings.chairCustomization,
                                 textAlign: TextAlign.center,
-                                style: interBold(
-                                    fontSize: 15.0,
-                                    fontStyle: FontStyle.normal),
+                                style: ubuntuBold(),
                               ),
                             ),
                           ),

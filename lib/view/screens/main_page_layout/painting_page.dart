@@ -3,7 +3,6 @@ import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
-import '../../../core/resources/routes_manager.dart';
 
 class PaintingScreen extends StatelessWidget {
   const PaintingScreen({super.key});
@@ -136,9 +135,7 @@ class PaintingScreen extends StatelessWidget {
                               child: Text(
                                 AppStrings.colorConsultation,
                                 textAlign: TextAlign.center,
-                                style: interBold(
-                                    fontSize: 15.0,
-                                    fontStyle: FontStyle.normal),
+                                style: ubuntuBold(),
                               ),
                             ),
                           ),
