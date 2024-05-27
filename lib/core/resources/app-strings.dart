@@ -31,7 +31,17 @@ class AppStrings {
   static const String heyUser =  'Hey, Mariam!';
   static const String newOrder =  'New Order';
   static const String painting =  'Painting';
-  static const String havingTrouble =  'Having trouble?';
+  static const String havingTrouble = 'Having trouble?';
+  static const String electricity =  'Electricity';
+  static const String discounts =  'Discounts %';
+  static const String electricCircuits =  'Electric Circuits Damage';
+  static const String otherIssue =  'Other issue';
+  static const String continueS =  'Continue';
+  static const String congrats =  'Congrats!!';
+  static const String yourOrder =  'Your Order have been taken and is\nbeing attended to.';
+  static const String takeAnotherOrder =  'Take another order';
+  static const String goToHome =  'Go to Home';
+  static const String findNearby =  '(find nearby craftsman)';
   static const String welcomeBack =  'Welcome back again in salah-ly\nThank you for logging in for a faster ordering experience.';
   static const String information =  'To reset your password, please enter your email address. You may need to check your spam folder or unblock no-reply@salahha.us';
 

@@ -2,11 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:sala7ly_app/core/resources/app-strings.dart';
 import 'package:sala7ly_app/core/resources/app_styles.dart';
 import 'package:sala7ly_app/core/resources/image_assets.dart';
+import 'package:sala7ly_app/view/screens/main_page_layout/widgets/grid_view_item.dart';
 import '../../../core/resources/app_colors.dart';
 
 //make it with cubit
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  MainPage({Key? key}) : super(key: key);
+
+  final List<String> strings = [
+    AppStrings.electricity,
+    'Electrical Appliances',
+    'Carpentry',
+    'Painting',
+    'Plumbing',
+    'Mechanicals',
+  ];
+
+  final List<String> images = [
+    AppImages.electricityImage,
+    AppImages.applicant,
+    AppImages.carpentry,
+    AppImages.painting,
+    AppImages.plumping,
+    AppImages.mechanicals,
+  ];
+  // methods list
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +129,7 @@ class MainPage extends StatelessWidget {
                     /*----- New order button -----*/
                     GestureDetector(
                       onTap: () {
-                        // make order
+                        // make order function
                       },
                       child: Container(
                         width: 156.0,
@@ -130,7 +150,7 @@ class MainPage extends StatelessWidget {
                               width: 4.0,
                             ),
                             Text(
-                             AppStrings.newOrder,
+                              AppStrings.newOrder,
                               style: interMedium(
                                   fontSize: 19.0,
                                   color: AppColors.white.withOpacity(0.6)),
@@ -149,40 +169,12 @@ class MainPage extends StatelessWidget {
                       crossAxisSpacing: 8.0,
                       childAspectRatio: 1.3,
                       children: List.generate(
-                        6,
-                        (index) => GestureDetector(
-                          onTap: () {
-                            // navigate to painting
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 189.0,
-                                height: 80.0,
-                                decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(25.0)),
-                                  image: DecorationImage(
-                                    image: AssetImage(AppImages.photo),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 13.0),
-                                child: Text(
-                                  AppStrings.painting,
-                                  style: interMedium(
-                                      color: AppColors.black,
-                                      fontStyle: FontStyle.normal,
-                                      fontSize: 14.0),
-                                ),
-                              ),
-                            ],
+                          images.length,
+                          (index) => GridViewItem(
+                              imageLink: images[index],
+                              text: strings[index],
+                              onTab: () {},
                           ),
-                        ),
                       ),
                     ),
                   ],

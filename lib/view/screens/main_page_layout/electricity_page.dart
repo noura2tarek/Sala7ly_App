@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 
 
-//add its strings
 class ElectricityScreen extends StatelessWidget {
   const ElectricityScreen({super.key});
 
@@ -50,7 +50,7 @@ class ElectricityScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  'Electricity',
+                                  AppStrings.electricity,
                                   style: timesBold(
                                     fontStyle: FontStyle.normal,
                                     color: AppColors.black,
@@ -70,7 +70,7 @@ class ElectricityScreen extends StatelessWidget {
                               ],
                             ),
                             Text(
-                              'Discounts %',
+                              AppStrings.discounts,
                               style: timesBold(
                                 fontStyle: FontStyle.normal,
                                 color: AppColors.black,
@@ -134,7 +134,7 @@ class ElectricityScreen extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(15.0)),
                               ),
                               child: Text(
-                                'Electric Circuits Damage',
+                                AppStrings.electricCircuits,
                                 textAlign: TextAlign.center,
                                 style: interBold(
                                     fontSize: 15.0,
@@ -152,21 +152,34 @@ class ElectricityScreen extends StatelessWidget {
                                 height: 47.0,
                                 width: 164.0,
                                 child: OutlinedButton(
-
-                                    onPressed: () {},
-                                    child: Row(
-                                      children: [
-                                        const Icon(Icons.add, color: AppColors.brown, size: 17.0,),
-                                        Text(
-                                          'Other issue',
-                                          style: interMedium(
-                                            fontStyle: FontStyle.normal,
-                                            fontSize: 18.0,
-                                            color: AppColors.brown,
-                                          ),
-                                        ),
-                                      ],
+                                  style: OutlinedButton.styleFrom(
+                                    backgroundColor: AppColors.buttonColor,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(6.0),
+                                      ),
                                     ),
+                                  ),
+                                  onPressed: () {
+                                    // add issue method
+                                  },
+                                  child: Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.add,
+                                        color: AppColors.brown,
+                                        size: 17.0,
+                                      ),
+                                      Text(
+                                        AppStrings.otherIssue,
+                                        style: interMedium(
+                                          fontStyle: FontStyle.normal,
+                                          fontSize: 18.0,
+                                          color: AppColors.brown,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Container(
@@ -176,17 +189,19 @@ class ElectricityScreen extends StatelessWidget {
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(6.0))),
                                 child: MaterialButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    //find nearby craft man method
+                                  },
                                   child: Column(
                                     children: [
                                       Text(
-                                        'Continue',
+                                        AppStrings.continueS,
                                         style: interMedium(
                                             fontStyle: FontStyle.normal,
                                             fontSize: 19.0),
                                       ),
                                       Text(
-                                        '(find nearby craftsman)',
+                                        AppStrings.findNearby,
                                         style: interMedium(
                                             fontSize: 11.0,
                                             fontStyle: FontStyle.normal,

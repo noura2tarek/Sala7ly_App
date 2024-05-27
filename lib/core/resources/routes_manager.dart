@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sala7ly_app/view/screens/auth/forget_password.dart';
 import 'package:sala7ly_app/view/screens/auth/login_page.dart';
 import 'package:sala7ly_app/view/screens/auth/register_page.dart';
-import 'package:sala7ly_app/view/screens/main_page/main_page.dart';
-
-import '../../view/screens/start_page/start_page.dart';
+import '../../view/screens/last_page/last_page.dart';
+import '../../view/screens/main_page_layout/electricity_page.dart';
+import '../../view/screens/main_page_layout/main_page.dart';
 
 //routes names class
 class AppRoutes {
@@ -15,6 +15,8 @@ class AppRoutes {
   static const String registerRoute = "/register";
   static const String forgetPasswordRoute = "/forgetPassword";
   static const String mainPageRoute = "/mainPage";
+  static const String electricityRoute = "/electricity";
+  static const String lastPageRoute = "/lastPage";
 
 }
 
@@ -26,4 +28,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutes.registerRoute: (context) =>  RegisterScreen(),
   AppRoutes.forgetPasswordRoute: (context) =>  ForgetPasswordScreen(),
   AppRoutes.mainPageRoute: (context) =>  MainPage(),
+  AppRoutes.electricityRoute: (context) =>  ElectricityScreen(),
+  AppRoutes.lastPageRoute: (context) =>  LastPage(),
 };
