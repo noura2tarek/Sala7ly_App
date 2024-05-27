@@ -4,6 +4,7 @@ import 'package:sala7ly_app/core/resources/app_styles.dart';
 import 'package:sala7ly_app/core/resources/image_assets.dart';
 import '../../../core/resources/app_colors.dart';
 
+//make it with cubit
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
