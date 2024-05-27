@@ -45,6 +45,11 @@ class AppStrings {
   static const String specialRequest =  'Special Electricity Request';
   static const String addExtraSpecific =  'Add extra specific issue';
   static const String anyOtherRepairs =  'Any other repairs you need to add?';
+  static const String chairCustomization = 'Chair Customization';
+  static const String carpentry = 'Carpentry';
+  static const String colorConsultation = 'Colour Consultation';
+  static const String eLectricalAppliances = 'Electrical Appliances';
+  static const String specialCarpentryRequest = 'Special Carpentry Request';
   static const String welcomeBack =  'Welcome back again in salah-ly\nThank you for logging in for a faster ordering experience.';
   static const String information =  'To reset your password, please enter your email address. You may need to check your spam folder or unblock no-reply@salahha.us';
 

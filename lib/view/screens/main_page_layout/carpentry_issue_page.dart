@@ -4,8 +4,8 @@ import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
 
-class ElectricityIssueScreen extends StatelessWidget {
-  const ElectricityIssueScreen({super.key});
+class CarpentryIssueScreen extends StatelessWidget {
+  const CarpentryIssueScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class ElectricityIssueScreen extends StatelessWidget {
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(AppImages.electricityImage),
+                      image: AssetImage(AppImages.carpentry3),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.only(
@@ -50,7 +50,7 @@ class ElectricityIssueScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                AppStrings.electricity,
+                                AppStrings.carpentry,
                                 style: timesBold(
                                   fontStyle: FontStyle.normal,
                                   color: AppColors.black,
@@ -91,13 +91,13 @@ class ElectricityIssueScreen extends StatelessWidget {
             ),
             /*------- second container-------*/
             Stack(
-              alignment: Alignment.bottomRight,
+              alignment: Alignment.topRight,
               children: [
                 Container(
                   width: double.infinity,
                   height: 534.0,
                   padding:
-                      const EdgeInsets.only(top: 65.0, left: 11.0, right: 10.0),
+                  const EdgeInsets.only(top: 65.0, left: 11.0, right: 10.0),
                   decoration: BoxDecoration(
                     color: AppColors.white,
                     image: const DecorationImage(
@@ -112,7 +112,7 @@ class ElectricityIssueScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AppStrings.specialRequest,
+                        AppStrings.specialCarpentryRequest,
                         style: interBold(
                             fontStyle: FontStyle.normal,
                             fontSize: 18.0,
@@ -166,7 +166,7 @@ class ElectricityIssueScreen extends StatelessWidget {
                             decoration: const BoxDecoration(
                                 color: AppColors.darkBrown,
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0))),
+                                BorderRadius.all(Radius.circular(6.0))),
                             child: MaterialButton(
                               onPressed: () {
                                 //find nearby craft man method
@@ -197,9 +197,9 @@ class ElectricityIssueScreen extends StatelessWidget {
                 ),
                 /*----- person image -----*/
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 90.0),
+                  padding: const EdgeInsets.only(top: 200.0),
                   child: Image.asset(
-                    AppImages.person,
+                    AppImages.carpentry2,
                     color: AppColors.black,
                   ),
                 ),

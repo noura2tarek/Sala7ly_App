@@ -3,9 +3,13 @@ import 'package:sala7ly_app/view/screens/auth/forget_password.dart';
 import 'package:sala7ly_app/view/screens/auth/login_page.dart';
 import 'package:sala7ly_app/view/screens/auth/register_page.dart';
 import '../../view/screens/last_page/last_page.dart';
+import '../../view/screens/main_page_layout/carpentry_issue_page.dart';
+import '../../view/screens/main_page_layout/carpentry_page.dart';
+import '../../view/screens/main_page_layout/electrical_appliances_page.dart';
 import '../../view/screens/main_page_layout/electricity_issue_page.dart';
 import '../../view/screens/main_page_layout/electricity_page.dart';
 import '../../view/screens/main_page_layout/main_page.dart';
+import '../../view/screens/main_page_layout/painting_page.dart';
 
 //routes names class
 class AppRoutes {
@@ -17,7 +21,11 @@ class AppRoutes {
   static const String forgetPasswordRoute = "/forgetPassword";
   static const String mainPageRoute = "/mainPage";
   static const String electricityRoute = "/electricity";
+  static const String carpentryRoute = "/carpentry";
+  static const String paintingRoute = "/painting";
+  static const String electricalAppliancesRoute = "/electricalAppliances";
   static const String electricityIssueRoute = "/electricityIssue";
+  static const String carpentryIssueRoute = "/carpentryIssue";
   static const String lastPageRoute = "/lastPage";
 
 }
@@ -31,6 +39,10 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutes.forgetPasswordRoute: (context) =>  ForgetPasswordScreen(),
   AppRoutes.mainPageRoute: (context) =>  MainPage(),
   AppRoutes.electricityRoute: (context) =>  ElectricityScreen(),
+  AppRoutes.carpentryRoute: (context) =>  CarpentryScreen(),
+  AppRoutes.paintingRoute: (context) =>  PaintingScreen(),
+  AppRoutes.electricalAppliancesRoute: (context) =>  ElectricalAppliancesScreen(),
   AppRoutes.electricityIssueRoute: (context) =>  ElectricityIssueScreen(),
+  AppRoutes.carpentryIssueRoute: (context) =>  CarpentryIssueScreen(),
   AppRoutes.lastPageRoute: (context) =>  LastPage(),
 };

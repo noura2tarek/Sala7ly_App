@@ -14,10 +14,11 @@ class AppImages {
   static const String settingsIcon ='$rootImages/settings.png';
   static const String user2Icon ='$rootImages/user2.png';
   static const String imageBlank ='$rootImages/blank.png';
-  static const String vectorLeading ='$rootImages/Vector.png';
+  static const String returnLeading ='$rootImages/return.png';
   static const String person ='$rootImages/image person.png';
   static const String rectangleBrown ='$rootImages/Rectangle brown.png';
   static const String correct ='$rootImages/correct.png';
+  static const String repair ='$rootImages/repair.png';
 // main page images
   static const String electricityImage ='$rootImages/electricity_image.png';
   static const String applicant ='$rootImages/applicant.png';
@@ -26,6 +27,9 @@ class AppImages {
   static const String plumping ='$rootImages/plumping.png';
   static const String mechanicals ='$rootImages/mechanicals.png';
   static const String editIcon ='$rootImages/edit.png';
+  static const String carpentry2 ='$rootImages/carpentry2.png';
+  static const String carpentry3 ='$rootImages/capentry3.png';
+  static const String painting2 ='$rootImages/painting2.png';
 
 
 
