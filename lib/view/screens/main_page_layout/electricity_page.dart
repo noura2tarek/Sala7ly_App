@@ -3,6 +3,7 @@ import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
+import '../../../core/resources/routes_manager.dart';
 
 
 class ElectricityScreen extends StatelessWidget {
@@ -148,6 +149,7 @@ class ElectricityScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
+                              /*----- Add other issue button -----*/
                               SizedBox(
                                 height: 47.0,
                                 width: 164.0,
@@ -161,7 +163,8 @@ class ElectricityScreen extends StatelessWidget {
                                     ),
                                   ),
                                   onPressed: () {
-                                    // add issue method
+                                    // go to E issue page
+                                    Navigator.pushNamed(context, AppRoutes.electricityIssueRoute);
                                   },
                                   child: Row(
                                     children: [
@@ -182,6 +185,7 @@ class ElectricityScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              /*----- Continue button -----*/
                               Container(
                                 height: 47.0,
                                 decoration: const BoxDecoration(

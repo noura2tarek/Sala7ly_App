@@ -42,6 +42,9 @@ class AppStrings {
   static const String takeAnotherOrder =  'Take another order';
   static const String goToHome =  'Go to Home';
   static const String findNearby =  '(find nearby craftsman)';
+  static const String specialRequest =  'Special Electricity Request';
+  static const String addExtraSpecific =  'Add extra specific issue';
+  static const String anyOtherRepairs =  'Any other repairs you need to add?';
   static const String welcomeBack =  'Welcome back again in salah-ly\nThank you for logging in for a faster ordering experience.';
   static const String information =  'To reset your password, please enter your email address. You may need to check your spam folder or unblock no-reply@salahha.us';
 

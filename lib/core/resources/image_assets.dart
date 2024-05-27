@@ -13,7 +13,7 @@ class AppImages {
   static const String notificationsIcon ='$rootImages/notifications.png';
   static const String settingsIcon ='$rootImages/settings.png';
   static const String user2Icon ='$rootImages/user2.png';
-  static const String imageBlank ='$rootImages/image 12.png';
+  static const String imageBlank ='$rootImages/blank.png';
   static const String vectorLeading ='$rootImages/Vector.png';
   static const String person ='$rootImages/image person.png';
   static const String rectangleBrown ='$rootImages/Rectangle brown.png';
@@ -25,6 +25,7 @@ class AppImages {
   static const String painting ='$rootImages/photo.png';
   static const String plumping ='$rootImages/plumping.png';
   static const String mechanicals ='$rootImages/mechanicals.png';
+  static const String editIcon ='$rootImages/edit.png';
 
 
 
