@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app_colors.dart';
-
-//Roboto regular 12
-TextStyle robotoRegular12 = const TextStyle(
-  fontWeight: FontWeight.normal,
-  color: AppColors.primaryColor,
-  fontSize: 12.0,
-  fontFamily: 'Roboto',
-);
+import 'package:sala7ly_app/core/resources/app_colors.dart';
 
 ///////Inter////////
 
@@ -28,7 +20,7 @@ TextStyle interRegular(
 
 //inter medium italic 20
 TextStyle interMedium(
-    {double fontSize = 20.0, Color color = Colors.white , FontStyle fontStyle = FontStyle.italic}) {
+    {double fontSize = 20.0, Color color = AppColors.white, FontStyle fontStyle = FontStyle.italic}) {
   return TextStyle(
     fontWeight: FontWeight.w500,
     color: color,
@@ -64,7 +56,7 @@ TextStyle interBold(
 
 //Times new roman
 TextStyle timesBold(
-    {var color = const Color(0xff000000),
+    {var color = AppColors.black,
       double fontSize = 27.0,
       FontStyle fontStyle = FontStyle.normal}) {
   return TextStyle(
@@ -79,7 +71,7 @@ TextStyle timesBold(
 
 //Ubuntu bold
 TextStyle ubuntuBold(
-    {var color = const Color(0xffffffff),
+    {var color =  AppColors.white,
       double fontSize = 15.0,
       FontStyle fontStyle = FontStyle.normal}) {
   return TextStyle(

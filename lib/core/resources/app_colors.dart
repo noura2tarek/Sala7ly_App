@@ -7,9 +7,9 @@ class AppColors {
   static const Color brown = Color(0xff221203);
   static const Color buttonColor = Color(0xffE8C5A6);
   static const Color secondColor =  Color(0xffCCDEDC);
-  static Color white = const Color(0xffffffff);
+  static const Color white =  Color(0xffffffff);
   static const Color darkGrey =  Color.fromRGBO(88, 88, 88, 1);
-  static Color black = const Color(0xff000000);
+  static const Color black =  Color(0xff000000);
   static Color? lightBlack1 =  Colors.black54;
   static Color lightBlack = Colors.black38;
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sala7ly_app/view/screens/main_page_layout/widgets/continue_button.dart';
 import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
@@ -167,9 +168,9 @@ class PlumbingScreen extends StatelessWidget {
                                     ),
                                   ),
                                   onPressed: () {
-                                    // go to E issue page
-                                    Navigator.pushNamed(context,
-                                        AppRoutes.plumbingIssueRoute);
+                                    // go to issue page
+                                    Navigator.pushNamed(
+                                        context, AppRoutes.plumbingIssueRoute);
                                   },
                                   child: Row(
                                     children: [
@@ -191,35 +192,8 @@ class PlumbingScreen extends StatelessWidget {
                                 ),
                               ),
                               /*----- Continue button -----*/
-                              Container(
-                                height: 47.0,
-                                decoration: const BoxDecoration(
-                                    color: AppColors.darkBrown,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(6.0))),
-                                child: MaterialButton(
-                                  onPressed: () {
-                                    //find nearby craft man method
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        AppStrings.continueS,
-                                        style: interMedium(
-                                            fontStyle: FontStyle.normal,
-                                            fontSize: 19.0),
-                                      ),
-                                      Text(
-                                        AppStrings.findNearby,
-                                        style: interMedium(
-                                            fontSize: 11.0,
-                                            fontStyle: FontStyle.normal,
-                                            color: AppColors.white
-                                                .withOpacity(0.5)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                              ContinueButton(
+                                onTab: () {},
                               ),
                             ],
                           ),
