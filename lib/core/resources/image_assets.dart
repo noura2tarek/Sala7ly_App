@@ -32,12 +32,18 @@ class AppImages {
   static const String painting2 ='$rootImages/painting2.png';
   static const String plumping2 ='$rootImages/plumbing2.png';
   static const String mechanics2 ='$rootImages/mechanics2.png';
+  // order details
   static const String person2 ='$rootImages/person2.png';
   static const String person3 ='$rootImages/person3.png';
   static const String person4 ='$rootImages/person4.png';
   static const String person5 ='$rootImages/person5.png';
   static const String person6 ='$rootImages/person6.png';
   static const String person7 ='$rootImages/person7.png';
+  //find your craft man
+  static const String map ='$rootImages/grad map.jpeg';
+  static const String user3 ='$rootImages/user3.png';
+  static const String searchIcon ='$rootImages/search_icon.png';
+  static const String loadingIcon ='$rootImages/loading.png';
 
 
 

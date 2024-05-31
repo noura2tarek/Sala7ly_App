@@ -4,6 +4,7 @@ import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
+import '../../../core/resources/routes_manager.dart';
 
 class PlumbingIssueScreen extends StatelessWidget {
   const PlumbingIssueScreen({super.key});
@@ -103,9 +104,9 @@ class PlumbingIssueScreen extends StatelessWidget {
                   height: 534.0,
                   padding:
                       const EdgeInsets.only(top: 65.0, left: 11.0, right: 10.0),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: AppColors.white,
-                    image: const DecorationImage(
+                    image: DecorationImage(
                       image: AssetImage(
                         AppImages.imageBlank,
                       ),
@@ -171,7 +172,10 @@ class PlumbingIssueScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Padding(
                           padding: const EdgeInsets.only(bottom: 40.0),
-                          child: ContinueButton(onTab: (){},),
+                          child: ContinueButton(onTab: (){
+                            Navigator.pushReplacementNamed(context,
+                                AppRoutes.plumberCraftmanRoute);
+                          },),
                         ),
                       ),
                     ],

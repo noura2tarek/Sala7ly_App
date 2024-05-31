@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:sala7ly_app/view/screens/auth/forget_password.dart';
 import 'package:sala7ly_app/view/screens/auth/login_page.dart';
 import 'package:sala7ly_app/view/screens/auth/register_page.dart';
+import '../../view/screens/craftman_page/carpentry_craftman_page.dart';
+import '../../view/screens/craftman_page/electricalApplianceCraftman_page.dart';
+import '../../view/screens/craftman_page/electricity_craftman_page.dart';
+import '../../view/screens/craftman_page/painter_crafman_page.dart';
+import '../../view/screens/craftman_page/plumber_craftman_page.dart';
 import '../../view/screens/last_page/last_page.dart';
 import '../../view/screens/main_page_layout/carpentry_issue_page.dart';
 import '../../view/screens/main_page_layout/carpentry_page.dart';
@@ -54,6 +59,12 @@ class AppRoutes {
   static const String electricalAppliancesOrderDetailsRoute =
       "/electricalAppliancesOrderDetails";
   static const String mechanicsOrderDetailsRoute = "/mechanicsOrderDetails";
+  static const String electricityCraftmanRoute = "/electricityCraftman";
+  static const String electricalApplianceCraftmanRoute = "/electricalApplianceCraftman";
+  static const String carpentryCraftmanRoute = "/carpentryCraftman";
+  static const String painterCraftmanRoute = "/painterCraftman";
+  static const String plumberCraftmanRoute = "/plumberCraftman";
+  static const String mechanicalCraftmanRoute = "/mechanicalCraftman";
   static const String lastPageRoute = "/lastPage";
 }
 
@@ -90,5 +101,10 @@ Map<String, Widget Function(BuildContext)> routes = {
       ElectricalAppliancesOrderScreen(),
   AppRoutes.mechanicsOrderDetailsRoute: (context) =>
       MechanicsOrderDetailsScreen(),
+  AppRoutes.electricityCraftmanRoute: (context) => ElectricianCraftsmanScreen(),
+  AppRoutes.carpentryCraftmanRoute: (context) => CarpentryCraftsmanScreen(),
+  AppRoutes.painterCraftmanRoute: (context) => PainterCraftsmanScreen(),
+  AppRoutes.plumberCraftmanRoute: (context) => PlumberCraftsmanScreen(),
+  AppRoutes.electricalApplianceCraftmanRoute: (context) => ElectricalApplianceCraftsmanScreen(),
   AppRoutes.lastPageRoute: (context) => LastPage(),
 };

@@ -185,7 +185,10 @@ class ElectricalAppliancesScreen extends StatelessWidget {
                                 ),
                               ),
                               /*----- Continue button -----*/
-                              ContinueButton(onTab: (){},),
+                              ContinueButton(onTab: (){
+                                Navigator.pushReplacementNamed(context,
+                                    AppRoutes.electricalApplianceCraftmanRoute);
+                              },),
                             ],
                           ),
                         ),

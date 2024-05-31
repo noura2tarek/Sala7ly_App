@@ -4,6 +4,7 @@ import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
+import '../../../core/resources/routes_manager.dart';
 
 class CarpentryIssueScreen extends StatelessWidget {
   const CarpentryIssueScreen({super.key});
@@ -168,7 +169,10 @@ class CarpentryIssueScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Padding(
                           padding: const EdgeInsets.only(bottom: 40.0),
-                          child: ContinueButton(onTab: (){},),
+                          child: ContinueButton(onTab: (){
+                            Navigator.pushReplacementNamed(context,
+                                AppRoutes.carpentryCraftmanRoute);
+                          },),
                         ),
                       ),
                     ],

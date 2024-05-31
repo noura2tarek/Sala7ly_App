@@ -184,7 +184,12 @@ class CarpentryScreen extends StatelessWidget {
                                 ),
                               ),
                               /*----- Continue button -----*/
-                              ContinueButton(onTab: (){},),
+                              ContinueButton(
+                                onTab: () {
+                                  Navigator.pushReplacementNamed(context,
+                                      AppRoutes.carpentryCraftmanRoute);
+                                },
+                              ),
                             ],
                           ),
                         ),

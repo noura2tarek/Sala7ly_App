@@ -193,7 +193,10 @@ class PlumbingScreen extends StatelessWidget {
                               ),
                               /*----- Continue button -----*/
                               ContinueButton(
-                                onTab: () {},
+                                onTab: () {
+                                  Navigator.pushReplacementNamed(context,
+                                      AppRoutes.plumberCraftmanRoute);
+                                },
                               ),
                             ],
                           ),

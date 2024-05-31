@@ -4,6 +4,7 @@ import '../../../core/resources/app-strings.dart';
 import '../../../core/resources/app_colors.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/image_assets.dart';
+import '../../../core/resources/routes_manager.dart';
 
 class ElectricalAppliancesIssueScreen extends StatelessWidget {
   const ElectricalAppliancesIssueScreen({super.key});
@@ -170,7 +171,10 @@ class ElectricalAppliancesIssueScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Padding(
                           padding: const EdgeInsets.only(bottom: 40.0),
-                          child: ContinueButton(onTab: (){},),
+                          child: ContinueButton(onTab: (){
+                            Navigator.pushReplacementNamed(context,
+                                AppRoutes.electricalApplianceCraftmanRoute);
+                          },),
                         ),
                       ),
                     ],
